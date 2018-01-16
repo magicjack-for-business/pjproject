@@ -1,0 +1,1615 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		5D631E58D8F04EC7A768FE50 /* package */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 138A04D0E93F45599C9EE569 /* Build configuration list for PBXAggregateTarget "package" */;
+			buildPhases = (
+				70E77C59D713457BB7E28F62 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				67B6D292A5D24E21A1957BA2 /* PBXTargetDependency */,
+			);
+			name = package;
+			productName = package;
+		};
+		806F8AE3A73848B9B1A3D131 /* install */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 12B7CC7682C94FBBACF51BDD /* Build configuration list for PBXAggregateTarget "install" */;
+			buildPhases = (
+				0F9BF3B10633479F95DAD690 /* CMake PostBuild Rules */,
+			);
+			dependencies = (
+				44A50F882B6C4EEAA53D4916 /* PBXTargetDependency */,
+			);
+			name = install;
+			productName = install;
+		};
+		A8B3CF840ABF415C80E228C8 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 44B11CBCF8F1464999A558B0 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				AE29DF50522A4127997BACEC /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		E3744CD3D7664AF3867061F3 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 2C310EDB168D4923A3584E1C /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				09CC98B6CF314408BD12BDE3 /* CMake Rules */,
+			);
+			dependencies = (
+				8ED91DE98FA94F69AFC443F4 /* PBXTargetDependency */,
+				4F4BEE8BFB954394A282B5DF /* PBXTargetDependency */,
+				891A2C5EA2E0455CBE4CC0FF /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		11019B7C430145AD8E42E41F /* encoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 9E2CD33D4B274AF191DC8A21 /* encoder.c */; };
+		14448E784B554B979B57B9AA /* gainQuantization.c in Sources */ = {isa = PBXBuildFile; fileRef = 1141EA75011D447A80C64353 /* gainQuantization.c */; };
+		177059F314B44F848F1D1CBC /* interpolateqLSP.c in Sources */ = {isa = PBXBuildFile; fileRef = F0364CF981FB4EF3924DCAB9 /* interpolateqLSP.c */; };
+		190EEFECB72841E08A491742 /* computeWeightedSpeech.c in Sources */ = {isa = PBXBuildFile; fileRef = 7FF6E63FF27F472BAEC6B232 /* computeWeightedSpeech.c */; };
+		1977A61E62D34594A006A4A0 /* vad.c in Sources */ = {isa = PBXBuildFile; fileRef = 8833E3CC47AF47919D018D19 /* vad.c */; };
+		19C97B92F32A4D75B6C7F6F5 /* decodeAdaptativeCodeVector.c in Sources */ = {isa = PBXBuildFile; fileRef = 5CDE8CE448EA418982B48741 /* decodeAdaptativeCodeVector.c */; };
+		1EA61191F57A435CBB526C10 /* fixedCodebookSearch.c in Sources */ = {isa = PBXBuildFile; fileRef = C563A11F32054C72B93DDF7E /* fixedCodebookSearch.c */; };
+		36DE40F0FD614AB7823C3680 /* decodeFixedCodeVector.c in Sources */ = {isa = PBXBuildFile; fileRef = 32546361058049939454A7D8 /* decodeFixedCodeVector.c */; };
+		377C37DB9957482293763D2C /* preProcessing.c in Sources */ = {isa = PBXBuildFile; fileRef = 9BE588E2E7CC4E62A939D26F /* preProcessing.c */; };
+		3FACB8305F2642A8B283EA51 /* decodeAdaptativeCodeVector.c in Sources */ = {isa = PBXBuildFile; fileRef = 5FF66EE68B254B1199A22881 /* decodeAdaptativeCodeVector.c */; };
+		42EC47D1976F40329A2468A0 /* LPSynthesisFilter.c in Sources */ = {isa = PBXBuildFile; fileRef = 5D39088C0D3D426CA71B1467 /* LPSynthesisFilter.c */; };
+		49F94E868AE44147B83CF6B9 /* decodeGains.c in Sources */ = {isa = PBXBuildFile; fileRef = E2CF06D205FD4F42B263E6E8 /* decodeGains.c */; };
+		4C40CEE71AF543BAB8CA62C3 /* codebooks.c in Sources */ = {isa = PBXBuildFile; fileRef = F4EFE8BF285D4A869632C4AA /* codebooks.c */; };
+		4FD163A081874823ABBE657A /* adaptativeCodebookSearch.c in Sources */ = {isa = PBXBuildFile; fileRef = 7AEE25ACB8454F0989BD2ED7 /* adaptativeCodebookSearch.c */; };
+		520A91BC99EC46818A393350 /* postFilter.c in Sources */ = {isa = PBXBuildFile; fileRef = 7382B362140745629259FEFD /* postFilter.c */; };
+		5272240CC56B4485A0BE3061 /* computeAdaptativeCodebookGain.c in Sources */ = {isa = PBXBuildFile; fileRef = 9D8AD977198B4457A8B9D1FE /* computeAdaptativeCodebookGain.c */; };
+		595CF62C85F94D07BB98148A /* decoder.c in Sources */ = {isa = PBXBuildFile; fileRef = E2B5D1F8B94C47BB8C1E6B9D /* decoder.c */; };
+		692FFB5B4DCD4CFFAC7563BD /* dtx.c in Sources */ = {isa = PBXBuildFile; fileRef = 5F0C23ED5DF74DCF99C90241 /* dtx.c */; };
+		72182DADB5D8404791403BEE /* adaptativeCodebookSearch.c in Sources */ = {isa = PBXBuildFile; fileRef = D84DE87C0C33448CB70A0550 /* adaptativeCodebookSearch.c */; };
+		74C548B2A3F3488A8B38C075 /* codebooks.c in Sources */ = {isa = PBXBuildFile; fileRef = 113D6A33A44A4EB4B4906A00 /* codebooks.c */; };
+		76E7BA32C2F0489B8668885C /* computeLP.c in Sources */ = {isa = PBXBuildFile; fileRef = CA67FEA8602B445E810B2378 /* computeLP.c */; };
+		8B8CF631297F4D0DAD919B42 /* decoder.c in Sources */ = {isa = PBXBuildFile; fileRef = CBF96F4D958B435780AAC114 /* decoder.c */; };
+		92E9A2934C1D4996BF99DE29 /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 3849DEE0BF894BF8A71CECD9 /* utils.c */; };
+		996FAA2424B145108D58406A /* preProcessing.c in Sources */ = {isa = PBXBuildFile; fileRef = 6D6CBA3143FF473DB258AAE3 /* preProcessing.c */; };
+		A44F719D889144E5A563F0DF /* gainQuantization.c in Sources */ = {isa = PBXBuildFile; fileRef = 80ED770C0861432489AD19C9 /* gainQuantization.c */; };
+		A4F2E58D2085424E9091E135 /* interpolateqLSP.c in Sources */ = {isa = PBXBuildFile; fileRef = 25140B831F6340CCBD2B384D /* interpolateqLSP.c */; };
+		A6C444BA0DBB41758A7284C4 /* computeWeightedSpeech.c in Sources */ = {isa = PBXBuildFile; fileRef = A34B012F13F84051B987105A /* computeWeightedSpeech.c */; };
+		A8DC9F0A4D8540148DF7BDD4 /* fixedCodebookSearch.c in Sources */ = {isa = PBXBuildFile; fileRef = 43C9B1DA459C4980B0DDA1D1 /* fixedCodebookSearch.c */; };
+		A97D6B9BDB654691B4C27540 /* encoder.c in Sources */ = {isa = PBXBuildFile; fileRef = 0C15A11B10A84C87ABAB26AC /* encoder.c */; };
+		AB5ED02E437242DBACA6E4DB /* vad.c in Sources */ = {isa = PBXBuildFile; fileRef = F9752B48FCBF4C7695F32F96 /* vad.c */; };
+		AEC8110F6DEF41D2AA8776A3 /* findOpenLoopPitchDelay.c in Sources */ = {isa = PBXBuildFile; fileRef = FBA0D45E59124BC18BCF76E9 /* findOpenLoopPitchDelay.c */; };
+		AF17B4A91A854862940E5883 /* cng.c in Sources */ = {isa = PBXBuildFile; fileRef = 19BEFB5E614C44E48A201E88 /* cng.c */; };
+		B831C207F1714B15BAD3D554 /* cng.c in Sources */ = {isa = PBXBuildFile; fileRef = B20D47B0F92D42F7844C50AF /* cng.c */; };
+		B9A940B9917D45C78BAEF024 /* qLSP2LP.c in Sources */ = {isa = PBXBuildFile; fileRef = E3078CB9E82E4E27B3DEF017 /* qLSP2LP.c */; };
+		BD8D3B37ECF843949CC85232 /* findOpenLoopPitchDelay.c in Sources */ = {isa = PBXBuildFile; fileRef = 86E354436E3C4F0EB95E9C54 /* findOpenLoopPitchDelay.c */; };
+		BED08CC451D542708BCF2357 /* utils.c in Sources */ = {isa = PBXBuildFile; fileRef = 7405E91AB53F421FBD5D6EB1 /* utils.c */; };
+		BF411CDFFD0944B99CBD1A1F /* LPSynthesisFilter.c in Sources */ = {isa = PBXBuildFile; fileRef = 8D4A53A163D94442BDAD367C /* LPSynthesisFilter.c */; };
+		C25D2342AD90412DA205BE0F /* decodeLSP.c in Sources */ = {isa = PBXBuildFile; fileRef = 8DEFA341B6074AA4A9CB348C /* decodeLSP.c */; };
+		C3F4788508D345ECA7CA8BAA /* postProcessing.c in Sources */ = {isa = PBXBuildFile; fileRef = 6B30D55B2ED846F4A49EF0DE /* postProcessing.c */; };
+		C5BF64B2AAA14CE49E0DDD6D /* computeAdaptativeCodebookGain.c in Sources */ = {isa = PBXBuildFile; fileRef = 7887B33E801A43BDBA5EA131 /* computeAdaptativeCodebookGain.c */; };
+		C6087EC816AE4D778C3B2A82 /* LSPQuantization.c in Sources */ = {isa = PBXBuildFile; fileRef = A583E750DC8E4ACABC3A4285 /* LSPQuantization.c */; };
+		C62DC95AD48A4AEBB3BE43B1 /* postFilter.c in Sources */ = {isa = PBXBuildFile; fileRef = 6635631B0F2642678998A39B /* postFilter.c */; };
+		D072A03CAAFC45E8B5073F08 /* computeLP.c in Sources */ = {isa = PBXBuildFile; fileRef = B62B18EC42EF4F52B66DFCE9 /* computeLP.c */; };
+		D0BBCA6AE6C84BB6A7259564 /* decodeFixedCodeVector.c in Sources */ = {isa = PBXBuildFile; fileRef = 926C22D747EF483D90E847BC /* decodeFixedCodeVector.c */; };
+		D27F89086B184751A76C32AE /* dtx.c in Sources */ = {isa = PBXBuildFile; fileRef = FB475B3E7B8F43868959E56C /* dtx.c */; };
+		D9E6A2A3370549429BF9B336 /* LSPQuantization.c in Sources */ = {isa = PBXBuildFile; fileRef = 60A06921A5384502BBA77C18 /* LSPQuantization.c */; };
+		DA7EC581D3774D6EA10F9FD2 /* decodeGains.c in Sources */ = {isa = PBXBuildFile; fileRef = 73E0CFEE33B84F2EA8F6553F /* decodeGains.c */; };
+		DC18C66ADD8C4EBF97010D37 /* LP2LSPConversion.c in Sources */ = {isa = PBXBuildFile; fileRef = 176C9BF1B6F44B5EAD3B76BE /* LP2LSPConversion.c */; };
+		E1DA1EC2B5B94E2F81F89ACA /* LP2LSPConversion.c in Sources */ = {isa = PBXBuildFile; fileRef = D899E12ED0CC4DE0A49D609E /* LP2LSPConversion.c */; };
+		EA81C3529ED3485B86674A86 /* decodeLSP.c in Sources */ = {isa = PBXBuildFile; fileRef = 6ECAA3F292DF4D25B096AFEF /* decodeLSP.c */; };
+		F0C0B375FD2645BFB79E876A /* qLSP2LP.c in Sources */ = {isa = PBXBuildFile; fileRef = 10FE85D2634648DF96970CEB /* qLSP2LP.c */; };
+		F7B9BA5BECAB4856AB8C19E1 /* postProcessing.c in Sources */ = {isa = PBXBuildFile; fileRef = C95C782E062F4F6FA39F9ECD /* postProcessing.c */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		36A482634B4F4636B1F040C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE743CBFE9CD4B01A0684584 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3744CD3D7664AF3867061F3;
+			remoteInfo = ALL_BUILD;
+		};
+		50EFF031AF764BBABAA10740 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE743CBFE9CD4B01A0684584 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3177D7D3DEDB4424A2938727;
+			remoteInfo = "bcg729-static";
+		};
+		8A6A8383EBFB4E9BA36AFAC5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE743CBFE9CD4B01A0684584 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8B3CF840ABF415C80E228C8;
+			remoteInfo = ZERO_CHECK;
+		};
+		A24C57B76F89401BAAE51E3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE743CBFE9CD4B01A0684584 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8B3CF840ABF415C80E228C8;
+			remoteInfo = ZERO_CHECK;
+		};
+		BEA5C9D6C3DA44A98FCE5DB6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE743CBFE9CD4B01A0684584 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A8B3CF840ABF415C80E228C8;
+			remoteInfo = ZERO_CHECK;
+		};
+		CF02E90F19284C8BB5F6722F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE743CBFE9CD4B01A0684584 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 79A4C4CE674E4C9D89B2ECC8;
+			remoteInfo = bcg729;
+		};
+		F05D84276A2C4C66882FEA2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DE743CBFE9CD4B01A0684584 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3744CD3D7664AF3867061F3;
+			remoteInfo = ALL_BUILD;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		093F6DCB76D148CEB0F0DA98 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		0B245DCC282E44FCABF8BD4C /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		0C15A11B10A84C87ABAB26AC /* encoder.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = encoder.c; path = src/encoder.c; sourceTree = SOURCE_ROOT; };
+		10FE85D2634648DF96970CEB /* qLSP2LP.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = qLSP2LP.c; path = src/qLSP2LP.c; sourceTree = SOURCE_ROOT; };
+		113D6A33A44A4EB4B4906A00 /* codebooks.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = codebooks.c; path = src/codebooks.c; sourceTree = SOURCE_ROOT; };
+		1141EA75011D447A80C64353 /* gainQuantization.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = gainQuantization.c; path = src/gainQuantization.c; sourceTree = SOURCE_ROOT; };
+		176C9BF1B6F44B5EAD3B76BE /* LP2LSPConversion.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = LP2LSPConversion.c; path = src/LP2LSPConversion.c; sourceTree = SOURCE_ROOT; };
+		19BEFB5E614C44E48A201E88 /* cng.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cng.c; path = src/cng.c; sourceTree = SOURCE_ROOT; };
+		25140B831F6340CCBD2B384D /* interpolateqLSP.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = interpolateqLSP.c; path = src/interpolateqLSP.c; sourceTree = SOURCE_ROOT; };
+		2AA892C4957341C1BAD42668 /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		32546361058049939454A7D8 /* decodeFixedCodeVector.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = decodeFixedCodeVector.c; path = src/decodeFixedCodeVector.c; sourceTree = SOURCE_ROOT; };
+		3849DEE0BF894BF8A71CECD9 /* utils.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = utils.c; path = src/utils.c; sourceTree = SOURCE_ROOT; };
+		43C9B1DA459C4980B0DDA1D1 /* fixedCodebookSearch.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fixedCodebookSearch.c; path = src/fixedCodebookSearch.c; sourceTree = SOURCE_ROOT; };
+		472AE8CE14164621A4F02A8B /* CMakeLists.txt */ = {isa = PBXFileReference; explicitFileType = sourcecode.text; fileEncoding = 4; lastKnownFileType = text; name = CMakeLists.txt; path = src/CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		5CDE8CE448EA418982B48741 /* decodeAdaptativeCodeVector.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = decodeAdaptativeCodeVector.c; path = src/decodeAdaptativeCodeVector.c; sourceTree = SOURCE_ROOT; };
+		5D39088C0D3D426CA71B1467 /* LPSynthesisFilter.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = LPSynthesisFilter.c; path = src/LPSynthesisFilter.c; sourceTree = SOURCE_ROOT; };
+		5F0C23ED5DF74DCF99C90241 /* dtx.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = dtx.c; path = src/dtx.c; sourceTree = SOURCE_ROOT; };
+		5FF66EE68B254B1199A22881 /* decodeAdaptativeCodeVector.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = decodeAdaptativeCodeVector.c; path = src/decodeAdaptativeCodeVector.c; sourceTree = SOURCE_ROOT; };
+		60A06921A5384502BBA77C18 /* LSPQuantization.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = LSPQuantization.c; path = src/LSPQuantization.c; sourceTree = SOURCE_ROOT; };
+		6635631B0F2642678998A39B /* postFilter.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = postFilter.c; path = src/postFilter.c; sourceTree = SOURCE_ROOT; };
+		6B30D55B2ED846F4A49EF0DE /* postProcessing.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = postProcessing.c; path = src/postProcessing.c; sourceTree = SOURCE_ROOT; };
+		6D6CBA3143FF473DB258AAE3 /* preProcessing.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = preProcessing.c; path = src/preProcessing.c; sourceTree = SOURCE_ROOT; };
+		6ECAA3F292DF4D25B096AFEF /* decodeLSP.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = decodeLSP.c; path = src/decodeLSP.c; sourceTree = SOURCE_ROOT; };
+		7382B362140745629259FEFD /* postFilter.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = postFilter.c; path = src/postFilter.c; sourceTree = SOURCE_ROOT; };
+		73E0CFEE33B84F2EA8F6553F /* decodeGains.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = decodeGains.c; path = src/decodeGains.c; sourceTree = SOURCE_ROOT; };
+		7405E91AB53F421FBD5D6EB1 /* utils.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = utils.c; path = src/utils.c; sourceTree = SOURCE_ROOT; };
+		7887B33E801A43BDBA5EA131 /* computeAdaptativeCodebookGain.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = computeAdaptativeCodebookGain.c; path = src/computeAdaptativeCodebookGain.c; sourceTree = SOURCE_ROOT; };
+		7AEE25ACB8454F0989BD2ED7 /* adaptativeCodebookSearch.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = adaptativeCodebookSearch.c; path = src/adaptativeCodebookSearch.c; sourceTree = SOURCE_ROOT; };
+		7FF6E63FF27F472BAEC6B232 /* computeWeightedSpeech.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = computeWeightedSpeech.c; path = src/computeWeightedSpeech.c; sourceTree = SOURCE_ROOT; };
+		80ED770C0861432489AD19C9 /* gainQuantization.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = gainQuantization.c; path = src/gainQuantization.c; sourceTree = SOURCE_ROOT; };
+		86E354436E3C4F0EB95E9C54 /* findOpenLoopPitchDelay.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = findOpenLoopPitchDelay.c; path = src/findOpenLoopPitchDelay.c; sourceTree = SOURCE_ROOT; };
+		8833E3CC47AF47919D018D19 /* vad.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vad.c; path = src/vad.c; sourceTree = SOURCE_ROOT; };
+		8D4A53A163D94442BDAD367C /* LPSynthesisFilter.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = LPSynthesisFilter.c; path = src/LPSynthesisFilter.c; sourceTree = SOURCE_ROOT; };
+		8DEFA341B6074AA4A9CB348C /* decodeLSP.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = decodeLSP.c; path = src/decodeLSP.c; sourceTree = SOURCE_ROOT; };
+		926C22D747EF483D90E847BC /* decodeFixedCodeVector.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = decodeFixedCodeVector.c; path = src/decodeFixedCodeVector.c; sourceTree = SOURCE_ROOT; };
+		9BE588E2E7CC4E62A939D26F /* preProcessing.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = preProcessing.c; path = src/preProcessing.c; sourceTree = SOURCE_ROOT; };
+		9D8AD977198B4457A8B9D1FE /* computeAdaptativeCodebookGain.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = computeAdaptativeCodebookGain.c; path = src/computeAdaptativeCodebookGain.c; sourceTree = SOURCE_ROOT; };
+		9E2CD33D4B274AF191DC8A21 /* encoder.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = encoder.c; path = src/encoder.c; sourceTree = SOURCE_ROOT; };
+		A34B012F13F84051B987105A /* computeWeightedSpeech.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = computeWeightedSpeech.c; path = src/computeWeightedSpeech.c; sourceTree = SOURCE_ROOT; };
+		A583E750DC8E4ACABC3A4285 /* LSPQuantization.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = LSPQuantization.c; path = src/LSPQuantization.c; sourceTree = SOURCE_ROOT; };
+		B20D47B0F92D42F7844C50AF /* cng.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = cng.c; path = src/cng.c; sourceTree = SOURCE_ROOT; };
+		B49F4BE1619A422DA6E78D02 /* libbcg729.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; name = libbcg729.dylib; path = libbcg729.0.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		B62B18EC42EF4F52B66DFCE9 /* computeLP.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = computeLP.c; path = src/computeLP.c; sourceTree = SOURCE_ROOT; };
+		C563A11F32054C72B93DDF7E /* fixedCodebookSearch.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = fixedCodebookSearch.c; path = src/fixedCodebookSearch.c; sourceTree = SOURCE_ROOT; };
+		C6DAED849EA44E10A210BF6F /* libbcg729.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libbcg729.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C95C782E062F4F6FA39F9ECD /* postProcessing.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = postProcessing.c; path = src/postProcessing.c; sourceTree = SOURCE_ROOT; };
+		CA67FEA8602B445E810B2378 /* computeLP.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = computeLP.c; path = src/computeLP.c; sourceTree = SOURCE_ROOT; };
+		CBF96F4D958B435780AAC114 /* decoder.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = decoder.c; path = src/decoder.c; sourceTree = SOURCE_ROOT; };
+		D84DE87C0C33448CB70A0550 /* adaptativeCodebookSearch.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = adaptativeCodebookSearch.c; path = src/adaptativeCodebookSearch.c; sourceTree = SOURCE_ROOT; };
+		D899E12ED0CC4DE0A49D609E /* LP2LSPConversion.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = LP2LSPConversion.c; path = src/LP2LSPConversion.c; sourceTree = SOURCE_ROOT; };
+		E2B5D1F8B94C47BB8C1E6B9D /* decoder.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = decoder.c; path = src/decoder.c; sourceTree = SOURCE_ROOT; };
+		E2CF06D205FD4F42B263E6E8 /* decodeGains.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = decodeGains.c; path = src/decodeGains.c; sourceTree = SOURCE_ROOT; };
+		E3078CB9E82E4E27B3DEF017 /* qLSP2LP.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = qLSP2LP.c; path = src/qLSP2LP.c; sourceTree = SOURCE_ROOT; };
+		F0364CF981FB4EF3924DCAB9 /* interpolateqLSP.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = interpolateqLSP.c; path = src/interpolateqLSP.c; sourceTree = SOURCE_ROOT; };
+		F4EFE8BF285D4A869632C4AA /* codebooks.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = codebooks.c; path = src/codebooks.c; sourceTree = SOURCE_ROOT; };
+		F9752B48FCBF4C7695F32F96 /* vad.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = vad.c; path = src/vad.c; sourceTree = SOURCE_ROOT; };
+		FB475B3E7B8F43868959E56C /* dtx.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = dtx.c; path = src/dtx.c; sourceTree = SOURCE_ROOT; };
+		FBA0D45E59124BC18BCF76E9 /* findOpenLoopPitchDelay.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = findOpenLoopPitchDelay.c; path = src/findOpenLoopPitchDelay.c; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		3F22E7B2C0674CCD84153FFF /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				176C9BF1B6F44B5EAD3B76BE /* LP2LSPConversion.c */,
+				8D4A53A163D94442BDAD367C /* LPSynthesisFilter.c */,
+				60A06921A5384502BBA77C18 /* LSPQuantization.c */,
+				D84DE87C0C33448CB70A0550 /* adaptativeCodebookSearch.c */,
+				B20D47B0F92D42F7844C50AF /* cng.c */,
+				F4EFE8BF285D4A869632C4AA /* codebooks.c */,
+				7887B33E801A43BDBA5EA131 /* computeAdaptativeCodebookGain.c */,
+				B62B18EC42EF4F52B66DFCE9 /* computeLP.c */,
+				7FF6E63FF27F472BAEC6B232 /* computeWeightedSpeech.c */,
+				5FF66EE68B254B1199A22881 /* decodeAdaptativeCodeVector.c */,
+				926C22D747EF483D90E847BC /* decodeFixedCodeVector.c */,
+				E2CF06D205FD4F42B263E6E8 /* decodeGains.c */,
+				8DEFA341B6074AA4A9CB348C /* decodeLSP.c */,
+				CBF96F4D958B435780AAC114 /* decoder.c */,
+				FB475B3E7B8F43868959E56C /* dtx.c */,
+				0C15A11B10A84C87ABAB26AC /* encoder.c */,
+				86E354436E3C4F0EB95E9C54 /* findOpenLoopPitchDelay.c */,
+				C563A11F32054C72B93DDF7E /* fixedCodebookSearch.c */,
+				80ED770C0861432489AD19C9 /* gainQuantization.c */,
+				F0364CF981FB4EF3924DCAB9 /* interpolateqLSP.c */,
+				6635631B0F2642678998A39B /* postFilter.c */,
+				C95C782E062F4F6FA39F9ECD /* postProcessing.c */,
+				9BE588E2E7CC4E62A939D26F /* preProcessing.c */,
+				10FE85D2634648DF96970CEB /* qLSP2LP.c */,
+				7405E91AB53F421FBD5D6EB1 /* utils.c */,
+				8833E3CC47AF47919D018D19 /* vad.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		448183D99533400495D365F4 /* ZERO_CHECK */ = {
+			isa = PBXGroup;
+			children = (
+				DFAB0D958B8745CDA7EFAC30 /* CMake Rules */,
+				2AA892C4957341C1BAD42668 /* CMakeLists.txt */,
+			);
+			name = ZERO_CHECK;
+			sourceTree = "<group>";
+		};
+		4F33CA2DC7AD44D29A4E36DF /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				E01A6ACB4C1C425F9CFC6F0C /* CMake Rules */,
+				093F6DCB76D148CEB0F0DA98 /* CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		7345BE1041AC4322A32BDF18 = {
+			isa = PBXGroup;
+			children = (
+				4F33CA2DC7AD44D29A4E36DF /* ALL_BUILD */,
+				448183D99533400495D365F4 /* ZERO_CHECK */,
+				AA6887510C5A4A6E8C340345 /* bcg729 */,
+				8D4FF995FE574FA2B0C5B831 /* bcg729-static */,
+				80E37181AC9144719B0990CB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		80E37181AC9144719B0990CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B49F4BE1619A422DA6E78D02 /* libbcg729.dylib */,
+				C6DAED849EA44E10A210BF6F /* libbcg729.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8D4FF995FE574FA2B0C5B831 /* bcg729-static */ = {
+			isa = PBXGroup;
+			children = (
+				3F22E7B2C0674CCD84153FFF /* Source Files */,
+				0B245DCC282E44FCABF8BD4C /* CMakeLists.txt */,
+			);
+			name = "bcg729-static";
+			sourceTree = "<group>";
+		};
+		AA6887510C5A4A6E8C340345 /* bcg729 */ = {
+			isa = PBXGroup;
+			children = (
+				F7EEBDAA0A464BE3BFC92049 /* Source Files */,
+				472AE8CE14164621A4F02A8B /* CMakeLists.txt */,
+			);
+			name = bcg729;
+			sourceTree = "<group>";
+		};
+		DFAB0D958B8745CDA7EFAC30 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		E01A6ACB4C1C425F9CFC6F0C /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		F7EEBDAA0A464BE3BFC92049 /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				D899E12ED0CC4DE0A49D609E /* LP2LSPConversion.c */,
+				5D39088C0D3D426CA71B1467 /* LPSynthesisFilter.c */,
+				A583E750DC8E4ACABC3A4285 /* LSPQuantization.c */,
+				7AEE25ACB8454F0989BD2ED7 /* adaptativeCodebookSearch.c */,
+				19BEFB5E614C44E48A201E88 /* cng.c */,
+				113D6A33A44A4EB4B4906A00 /* codebooks.c */,
+				9D8AD977198B4457A8B9D1FE /* computeAdaptativeCodebookGain.c */,
+				CA67FEA8602B445E810B2378 /* computeLP.c */,
+				A34B012F13F84051B987105A /* computeWeightedSpeech.c */,
+				5CDE8CE448EA418982B48741 /* decodeAdaptativeCodeVector.c */,
+				32546361058049939454A7D8 /* decodeFixedCodeVector.c */,
+				73E0CFEE33B84F2EA8F6553F /* decodeGains.c */,
+				6ECAA3F292DF4D25B096AFEF /* decodeLSP.c */,
+				E2B5D1F8B94C47BB8C1E6B9D /* decoder.c */,
+				5F0C23ED5DF74DCF99C90241 /* dtx.c */,
+				9E2CD33D4B274AF191DC8A21 /* encoder.c */,
+				FBA0D45E59124BC18BCF76E9 /* findOpenLoopPitchDelay.c */,
+				43C9B1DA459C4980B0DDA1D1 /* fixedCodebookSearch.c */,
+				1141EA75011D447A80C64353 /* gainQuantization.c */,
+				25140B831F6340CCBD2B384D /* interpolateqLSP.c */,
+				7382B362140745629259FEFD /* postFilter.c */,
+				6B30D55B2ED846F4A49EF0DE /* postProcessing.c */,
+				6D6CBA3143FF473DB258AAE3 /* preProcessing.c */,
+				E3078CB9E82E4E27B3DEF017 /* qLSP2LP.c */,
+				3849DEE0BF894BF8A71CECD9 /* utils.c */,
+				F9752B48FCBF4C7695F32F96 /* vad.c */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3177D7D3DEDB4424A2938727 /* bcg729-static */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3819B16AF8ED489E87BD37EA /* Build configuration list for PBXNativeTarget "bcg729-static" */;
+			buildPhases = (
+				B231EA1935AE49358945F8F4 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				376D0BAA4B8C4B5993E1B2EE /* PBXTargetDependency */,
+			);
+			name = "bcg729-static";
+			productName = "bcg729-static";
+			productReference = C6DAED849EA44E10A210BF6F /* libbcg729.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		79A4C4CE674E4C9D89B2ECC8 /* bcg729 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04555A05D1D74EA088EB3610 /* Build configuration list for PBXNativeTarget "bcg729" */;
+			buildPhases = (
+				0FE6AB86C4E7412D8D1558A0 /* Sources */,
+				5914428775E3467B937A5685 /* CMake PostBuild Rules */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				276CF0748F9940EEB23051A1 /* PBXTargetDependency */,
+			);
+			name = bcg729;
+			productName = bcg729;
+			productReference = B49F4BE1619A422DA6E78D02 /* libbcg729.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DE743CBFE9CD4B01A0684584 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 0920;
+			};
+			buildConfigurationList = 1A8EF72225EE4F5CA74E56AA /* Build configuration list for PBXProject "bcg729" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7345BE1041AC4322A32BDF18;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E3744CD3D7664AF3867061F3 /* ALL_BUILD */,
+				A8B3CF840ABF415C80E228C8 /* ZERO_CHECK */,
+				806F8AE3A73848B9B1A3D131 /* install */,
+				5D631E58D8F04EC7A768FE50 /* package */,
+				79A4C4CE674E4C9D89B2ECC8 /* bcg729 */,
+				3177D7D3DEDB4424A2938727 /* bcg729-static */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		09CC98B6CF314408BD12BDE3 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/michalrogowski/Downloads/bcg729-master-2 -f /Users/michalrogowski/Downloads/bcg729-master-2/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		0F9BF3B10633479F95DAD690 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/michalrogowski/Downloads/bcg729-master-2 -f /Users/michalrogowski/Downloads/bcg729-master-2/CMakeScripts/install_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		5914428775E3467B937A5685 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/michalrogowski/Downloads/bcg729-master-2/src -f /Users/michalrogowski/Downloads/bcg729-master-2/src/CMakeScripts/bcg729_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		70E77C59D713457BB7E28F62 /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/michalrogowski/Downloads/bcg729-master-2 -f /Users/michalrogowski/Downloads/bcg729-master-2/CMakeScripts/package_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		AE29DF50522A4127997BACEC /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/michalrogowski/Downloads/bcg729-master-2 -f /Users/michalrogowski/Downloads/bcg729-master-2/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0FE6AB86C4E7412D8D1558A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E1DA1EC2B5B94E2F81F89ACA /* LP2LSPConversion.c in Sources */,
+				42EC47D1976F40329A2468A0 /* LPSynthesisFilter.c in Sources */,
+				C6087EC816AE4D778C3B2A82 /* LSPQuantization.c in Sources */,
+				4FD163A081874823ABBE657A /* adaptativeCodebookSearch.c in Sources */,
+				AF17B4A91A854862940E5883 /* cng.c in Sources */,
+				74C548B2A3F3488A8B38C075 /* codebooks.c in Sources */,
+				5272240CC56B4485A0BE3061 /* computeAdaptativeCodebookGain.c in Sources */,
+				76E7BA32C2F0489B8668885C /* computeLP.c in Sources */,
+				A6C444BA0DBB41758A7284C4 /* computeWeightedSpeech.c in Sources */,
+				19C97B92F32A4D75B6C7F6F5 /* decodeAdaptativeCodeVector.c in Sources */,
+				36DE40F0FD614AB7823C3680 /* decodeFixedCodeVector.c in Sources */,
+				DA7EC581D3774D6EA10F9FD2 /* decodeGains.c in Sources */,
+				EA81C3529ED3485B86674A86 /* decodeLSP.c in Sources */,
+				595CF62C85F94D07BB98148A /* decoder.c in Sources */,
+				692FFB5B4DCD4CFFAC7563BD /* dtx.c in Sources */,
+				11019B7C430145AD8E42E41F /* encoder.c in Sources */,
+				AEC8110F6DEF41D2AA8776A3 /* findOpenLoopPitchDelay.c in Sources */,
+				A8DC9F0A4D8540148DF7BDD4 /* fixedCodebookSearch.c in Sources */,
+				14448E784B554B979B57B9AA /* gainQuantization.c in Sources */,
+				A4F2E58D2085424E9091E135 /* interpolateqLSP.c in Sources */,
+				520A91BC99EC46818A393350 /* postFilter.c in Sources */,
+				C3F4788508D345ECA7CA8BAA /* postProcessing.c in Sources */,
+				996FAA2424B145108D58406A /* preProcessing.c in Sources */,
+				B9A940B9917D45C78BAEF024 /* qLSP2LP.c in Sources */,
+				92E9A2934C1D4996BF99DE29 /* utils.c in Sources */,
+				AB5ED02E437242DBACA6E4DB /* vad.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B231EA1935AE49358945F8F4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC18C66ADD8C4EBF97010D37 /* LP2LSPConversion.c in Sources */,
+				BF411CDFFD0944B99CBD1A1F /* LPSynthesisFilter.c in Sources */,
+				D9E6A2A3370549429BF9B336 /* LSPQuantization.c in Sources */,
+				72182DADB5D8404791403BEE /* adaptativeCodebookSearch.c in Sources */,
+				B831C207F1714B15BAD3D554 /* cng.c in Sources */,
+				4C40CEE71AF543BAB8CA62C3 /* codebooks.c in Sources */,
+				C5BF64B2AAA14CE49E0DDD6D /* computeAdaptativeCodebookGain.c in Sources */,
+				D072A03CAAFC45E8B5073F08 /* computeLP.c in Sources */,
+				190EEFECB72841E08A491742 /* computeWeightedSpeech.c in Sources */,
+				3FACB8305F2642A8B283EA51 /* decodeAdaptativeCodeVector.c in Sources */,
+				D0BBCA6AE6C84BB6A7259564 /* decodeFixedCodeVector.c in Sources */,
+				49F94E868AE44147B83CF6B9 /* decodeGains.c in Sources */,
+				C25D2342AD90412DA205BE0F /* decodeLSP.c in Sources */,
+				8B8CF631297F4D0DAD919B42 /* decoder.c in Sources */,
+				D27F89086B184751A76C32AE /* dtx.c in Sources */,
+				A97D6B9BDB654691B4C27540 /* encoder.c in Sources */,
+				BD8D3B37ECF843949CC85232 /* findOpenLoopPitchDelay.c in Sources */,
+				1EA61191F57A435CBB526C10 /* fixedCodebookSearch.c in Sources */,
+				A44F719D889144E5A563F0DF /* gainQuantization.c in Sources */,
+				177059F314B44F848F1D1CBC /* interpolateqLSP.c in Sources */,
+				C62DC95AD48A4AEBB3BE43B1 /* postFilter.c in Sources */,
+				F7B9BA5BECAB4856AB8C19E1 /* postProcessing.c in Sources */,
+				377C37DB9957482293763D2C /* preProcessing.c in Sources */,
+				F0C0B375FD2645BFB79E876A /* qLSP2LP.c in Sources */,
+				BED08CC451D542708BCF2357 /* utils.c in Sources */,
+				1977A61E62D34594A006A4A0 /* vad.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		276CF0748F9940EEB23051A1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8B3CF840ABF415C80E228C8 /* ZERO_CHECK */;
+			targetProxy = A24C57B76F89401BAAE51E3E /* PBXContainerItemProxy */;
+		};
+		376D0BAA4B8C4B5993E1B2EE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8B3CF840ABF415C80E228C8 /* ZERO_CHECK */;
+			targetProxy = 8A6A8383EBFB4E9BA36AFAC5 /* PBXContainerItemProxy */;
+		};
+		44A50F882B6C4EEAA53D4916 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E3744CD3D7664AF3867061F3 /* ALL_BUILD */;
+			targetProxy = F05D84276A2C4C66882FEA2B /* PBXContainerItemProxy */;
+		};
+		4F4BEE8BFB954394A282B5DF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 79A4C4CE674E4C9D89B2ECC8 /* bcg729 */;
+			targetProxy = CF02E90F19284C8BB5F6722F /* PBXContainerItemProxy */;
+		};
+		67B6D292A5D24E21A1957BA2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E3744CD3D7664AF3867061F3 /* ALL_BUILD */;
+			targetProxy = 36A482634B4F4636B1F040C6 /* PBXContainerItemProxy */;
+		};
+		891A2C5EA2E0455CBE4CC0FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3177D7D3DEDB4424A2938727 /* bcg729-static */;
+			targetProxy = 50EFF031AF764BBABAA10740 /* PBXContainerItemProxy */;
+		};
+		8ED91DE98FA94F69AFC443F4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A8B3CF840ABF415C80E228C8 /* ZERO_CHECK */;
+			targetProxy = BEA5C9D6C3DA44A98FCE5DB6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		088F3CD91ED24A8C881349AB /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/michalrogowski/Downloads/bcg729-master-2/include",
+					"/Users/michalrogowski/Downloads/bcg729-master-2/src",
+					"/Users/michalrogowski/Downloads/bcg729-master-2",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/michalrogowski/Downloads/bcg729-master-2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		0A08ED200C504497B98AB247 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/michalrogowski/Downloads/bcg729-master-2/include",
+					"/Users/michalrogowski/Downloads/bcg729-master-2/src",
+					"/Users/michalrogowski/Downloads/bcg729-master-2",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/michalrogowski/Downloads/bcg729-master-2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		1F432653BF194934B9A57FFD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/michalrogowski/Downloads/bcg729-master-2/include",
+					"/Users/michalrogowski/Downloads/bcg729-master-2/src",
+					"/Users/michalrogowski/Downloads/bcg729-master-2",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/michalrogowski/Downloads/bcg729-master-2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		2D1B0419185544B3ABCB6006 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/michalrogowski/Downloads/bcg729-master-2/include",
+					"/Users/michalrogowski/Downloads/bcg729-master-2/src",
+					"/Users/michalrogowski/Downloads/bcg729-master-2",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SDKROOT = iphoneos;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/michalrogowski/Downloads/bcg729-master-2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		2F531E3EBFDA464FB3AEEAD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/michalrogowski/Downloads/bcg729-master-2/include",
+					"/Users/michalrogowski/Downloads/bcg729-master-2/src",
+					"/Users/michalrogowski/Downloads/bcg729-master-2",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/michalrogowski/Downloads/bcg729-master-2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		31D9A3849AC24DE8AB6AF240 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = "";
+				DYLIB_CURRENT_VERSION = "";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .dylib;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					bcg729_EXPORTS,
+					BCG729_EXPORTS,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/michalrogowski/Downloads/bcg729-master-2/include",
+					"/Users/michalrogowski/Downloads/bcg729-master-2/src",
+					"/Users/michalrogowski/Downloads/bcg729-master-2",
+				);
+				INSTALL_PATH = "@rpath";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = DYNAMIC;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-Wall",
+					"-Werror",
+				);
+				OTHER_LDFLAGS = (
+					"-dynamiclib",
+					"-Wl,-headerpad_max_install_names",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = bcg729.0;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/michalrogowski/Downloads/bcg729-master-2/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		427B77D003A04C4FB8497092 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/michalrogowski/Downloads/bcg729-master-2/include",
+					"/Users/michalrogowski/Downloads/bcg729-master-2/src",
+					"/Users/michalrogowski/Downloads/bcg729-master-2",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SDKROOT = iphoneos;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/michalrogowski/Downloads/bcg729-master-2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		439C8179862B4E12B8722760 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/michalrogowski/Downloads/bcg729-master-2/include",
+					"/Users/michalrogowski/Downloads/bcg729-master-2/src",
+					"/Users/michalrogowski/Downloads/bcg729-master-2",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/michalrogowski/Downloads/bcg729-master-2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		4603BD563D5140E9A09D13A8 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/michalrogowski/Downloads/bcg729-master-2/include",
+					"/Users/michalrogowski/Downloads/bcg729-master-2/src",
+					"/Users/michalrogowski/Downloads/bcg729-master-2",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/michalrogowski/Downloads/bcg729-master-2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		4DACF857E16B44469DD6E74F /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					BCG729_EXPORTS,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/include",
+					"$(SRCROOT)/src",
+					"$(SRCROOT)",
+				);
+				INSTALL_PATH = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-Wall",
+					"-Werror",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = bcg729;
+				SDKROOT = iphoneos;
+				SECTORDER_FLAGS = "";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SYMROOT = "$(SRCROOT)/src";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "armv7 armv7s arm64";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		4FCF767B96FF47D9B0D935AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = "";
+				DYLIB_CURRENT_VERSION = "";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .dylib;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					bcg729_EXPORTS,
+					BCG729_EXPORTS,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/michalrogowski/Downloads/bcg729-master-2/include",
+					"/Users/michalrogowski/Downloads/bcg729-master-2/src",
+					"/Users/michalrogowski/Downloads/bcg729-master-2",
+				);
+				INSTALL_PATH = "@rpath";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = DYNAMIC;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-Wall",
+					"-Werror",
+				);
+				OTHER_LDFLAGS = (
+					"-dynamiclib",
+					"-Wl,-headerpad_max_install_names",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = bcg729.0;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/michalrogowski/Downloads/bcg729-master-2/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		5322BB0A58D04469B87C5289 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					BCG729_EXPORTS,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/include",
+					"$(SRCROOT)/src",
+					"$(SRCROOT)",
+				);
+				INSTALL_PATH = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-Wall",
+					"-Werror",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = bcg729;
+				SDKROOT = iphoneos;
+				SECTORDER_FLAGS = "";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SYMROOT = "$(SRCROOT)/src";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "armv7 armv7s arm64";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		5B41BD45E68F489BB93F494B /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/michalrogowski/Downloads/bcg729-master-2/include",
+					"/Users/michalrogowski/Downloads/bcg729-master-2/src",
+					"/Users/michalrogowski/Downloads/bcg729-master-2",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/michalrogowski/Downloads/bcg729-master-2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		602551E4B94E4E77B2CECE58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/michalrogowski/Downloads/bcg729-master-2/include",
+					"/Users/michalrogowski/Downloads/bcg729-master-2/src",
+					"/Users/michalrogowski/Downloads/bcg729-master-2",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/michalrogowski/Downloads/bcg729-master-2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		8BD326D18D2E4093800F1695 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/michalrogowski/Downloads/bcg729-master-2/include",
+					"/Users/michalrogowski/Downloads/bcg729-master-2/src",
+					"/Users/michalrogowski/Downloads/bcg729-master-2",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/michalrogowski/Downloads/bcg729-master-2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		AC5321E78A8C478E9BF5F6E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/michalrogowski/Downloads/bcg729-master-2/include",
+					"/Users/michalrogowski/Downloads/bcg729-master-2/src",
+					"/Users/michalrogowski/Downloads/bcg729-master-2",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = install;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/michalrogowski/Downloads/bcg729-master-2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		AC8452115CFF45E88BE23DD6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					BCG729_EXPORTS,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/include",
+					"$(SRCROOT)/src",
+					"$(SRCROOT)",
+				);
+				INSTALL_PATH = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-Wall",
+					"-Werror",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = bcg729;
+				SDKROOT = iphoneos;
+				SECTORDER_FLAGS = "";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SYMROOT = "$(SRCROOT)/src";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "armv7 armv7s arm64";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		B0EEE65D2C3941CA8F61753E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/michalrogowski/Downloads/bcg729-master-2/include",
+					"/Users/michalrogowski/Downloads/bcg729-master-2/src",
+					"/Users/michalrogowski/Downloads/bcg729-master-2",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = package;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/michalrogowski/Downloads/bcg729-master-2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		B2160DD9C0E445C18AF35992 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = "";
+				DYLIB_CURRENT_VERSION = "";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .dylib;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					bcg729_EXPORTS,
+					BCG729_EXPORTS,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/michalrogowski/Downloads/bcg729-master-2/include",
+					"/Users/michalrogowski/Downloads/bcg729-master-2/src",
+					"/Users/michalrogowski/Downloads/bcg729-master-2",
+				);
+				INSTALL_PATH = "@rpath";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = DYNAMIC;
+				OTHER_CFLAGS = (
+					"-fPIC",
+					"-Wall",
+					"-Werror",
+				);
+				OTHER_LDFLAGS = (
+					"-dynamiclib",
+					"-Wl,-headerpad_max_install_names",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = bcg729.0;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/michalrogowski/Downloads/bcg729-master-2/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		B41D45F2467B4B25972C3F0D /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/michalrogowski/Downloads/bcg729-master-2/include",
+					"/Users/michalrogowski/Downloads/bcg729-master-2/src",
+					"/Users/michalrogowski/Downloads/bcg729-master-2",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/michalrogowski/Downloads/bcg729-master-2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		BA796CCD4457439D97C3F755 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SYMROOT = "/Users/michalrogowski/Downloads/bcg729-master-2/build";
+			};
+			name = RelWithDebInfo;
+		};
+		C09378AF89604CDC913A11AB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SYMROOT = "/Users/michalrogowski/Downloads/bcg729-master-2/build";
+			};
+			name = Debug;
+		};
+		C5CC26C3CD1C4744ACFF0AA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SYMROOT = "/Users/michalrogowski/Downloads/bcg729-master-2/build";
+			};
+			name = Release;
+		};
+		CDE829A9044448ED9C4BF96C /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.13.sdk;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SYMROOT = "/Users/michalrogowski/Downloads/bcg729-master-2/build";
+			};
+			name = MinSizeRel;
+		};
+		D13D515B2E5748B0A4450A3B /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/michalrogowski/Downloads/bcg729-master-2/include",
+					"/Users/michalrogowski/Downloads/bcg729-master-2/src",
+					"/Users/michalrogowski/Downloads/bcg729-master-2",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SDKROOT = iphoneos;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/michalrogowski/Downloads/bcg729-master-2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		DFE30012E7F142B3BAC337D6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = "'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'";
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/michalrogowski/Downloads/bcg729-master-2/include",
+					"/Users/michalrogowski/Downloads/bcg729-master-2/src",
+					"/Users/michalrogowski/Downloads/bcg729-master-2",
+				);
+				INSTALL_PATH = "";
+				OTHER_LDFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SDKROOT = iphoneos;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/michalrogowski/Downloads/bcg729-master-2";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Release;
+		};
+		E60DDB67DD5B4FA0B1483543 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DYLIB_COMPATIBILITY_VERSION = "";
+				DYLIB_CURRENT_VERSION = "";
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .dylib;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					bcg729_EXPORTS,
+					BCG729_EXPORTS,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					"/Users/michalrogowski/Downloads/bcg729-master-2/include",
+					"/Users/michalrogowski/Downloads/bcg729-master-2/src",
+					"/Users/michalrogowski/Downloads/bcg729-master-2",
+				);
+				INSTALL_PATH = "@rpath";
+				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_STYLE = DYNAMIC;
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-fPIC",
+					"-Wall",
+					"-Werror",
+				);
+				OTHER_LDFLAGS = (
+					"-dynamiclib",
+					"-Wl,-headerpad_max_install_names",
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = bcg729.0;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/michalrogowski/Downloads/bcg729-master-2/src";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = MinSizeRel;
+		};
+		EDF977639D03432397EAFF93 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = (
+					"$(ARCHS_STANDARD)",
+					armv7s,
+				);
+				COMBINE_HIDPI_IMAGES = YES;
+				EXECUTABLE_PREFIX = lib;
+				EXECUTABLE_SUFFIX = .a;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					BCG729_EXPORTS,
+					HAVE_CONFIG_H,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)/include",
+					"$(SRCROOT)/src",
+					"$(SRCROOT)",
+				);
+				INSTALL_PATH = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LIBRARY_STYLE = STATIC;
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_CFLAGS = (
+					"-Wall",
+					"-Werror",
+				);
+				OTHER_LIBTOOLFLAGS = " ";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = bcg729;
+				SDKROOT = iphoneos;
+				SECTORDER_FLAGS = "";
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SYMROOT = "$(SRCROOT)/src";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USE_HEADERMAP = NO;
+				VALID_ARCHS = "armv7 armv7s arm64";
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04555A05D1D74EA088EB3610 /* Build configuration list for PBXNativeTarget "bcg729" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B2160DD9C0E445C18AF35992 /* Debug */,
+				4FCF767B96FF47D9B0D935AF /* Release */,
+				E60DDB67DD5B4FA0B1483543 /* MinSizeRel */,
+				31D9A3849AC24DE8AB6AF240 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		12B7CC7682C94FBBACF51BDD /* Build configuration list for PBXAggregateTarget "install" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1F432653BF194934B9A57FFD /* Debug */,
+				AC5321E78A8C478E9BF5F6E0 /* Release */,
+				4603BD563D5140E9A09D13A8 /* MinSizeRel */,
+				8BD326D18D2E4093800F1695 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		138A04D0E93F45599C9EE569 /* Build configuration list for PBXAggregateTarget "package" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				602551E4B94E4E77B2CECE58 /* Debug */,
+				B0EEE65D2C3941CA8F61753E /* Release */,
+				439C8179862B4E12B8722760 /* MinSizeRel */,
+				088F3CD91ED24A8C881349AB /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		1A8EF72225EE4F5CA74E56AA /* Build configuration list for PBXProject "bcg729" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C09378AF89604CDC913A11AB /* Debug */,
+				C5CC26C3CD1C4744ACFF0AA3 /* Release */,
+				CDE829A9044448ED9C4BF96C /* MinSizeRel */,
+				BA796CCD4457439D97C3F755 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		2C310EDB168D4923A3584E1C /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0A08ED200C504497B98AB247 /* Debug */,
+				2F531E3EBFDA464FB3AEEAD8 /* Release */,
+				B41D45F2467B4B25972C3F0D /* MinSizeRel */,
+				5B41BD45E68F489BB93F494B /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		3819B16AF8ED489E87BD37EA /* Build configuration list for PBXNativeTarget "bcg729-static" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDF977639D03432397EAFF93 /* Debug */,
+				AC8452115CFF45E88BE23DD6 /* Release */,
+				5322BB0A58D04469B87C5289 /* MinSizeRel */,
+				4DACF857E16B44469DD6E74F /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		44B11CBCF8F1464999A558B0 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D1B0419185544B3ABCB6006 /* Debug */,
+				DFE30012E7F142B3BAC337D6 /* Release */,
+				D13D515B2E5748B0A4450A3B /* MinSizeRel */,
+				427B77D003A04C4FB8497092 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DE743CBFE9CD4B01A0684584 /* Project object */;
+}

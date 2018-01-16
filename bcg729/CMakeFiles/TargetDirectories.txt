@@ -1,0 +1,10 @@
+/Users/michalrogowski/Downloads/bcg729-master-2/CMakeFiles/install.dir
+/Users/michalrogowski/Downloads/bcg729-master-2/CMakeFiles/package.dir
+/Users/michalrogowski/Downloads/bcg729-master-2/CMakeFiles/ALL_BUILD.dir
+/Users/michalrogowski/Downloads/bcg729-master-2/CMakeFiles/ZERO_CHECK.dir
+/Users/michalrogowski/Downloads/bcg729-master-2/include/CMakeFiles/install.dir
+/Users/michalrogowski/Downloads/bcg729-master-2/include/CMakeFiles/package.dir
+/Users/michalrogowski/Downloads/bcg729-master-2/src/CMakeFiles/install.dir
+/Users/michalrogowski/Downloads/bcg729-master-2/src/CMakeFiles/package.dir
+/Users/michalrogowski/Downloads/bcg729-master-2/src/CMakeFiles/bcg729.dir
+/Users/michalrogowski/Downloads/bcg729-master-2/src/CMakeFiles/bcg729-static.dir

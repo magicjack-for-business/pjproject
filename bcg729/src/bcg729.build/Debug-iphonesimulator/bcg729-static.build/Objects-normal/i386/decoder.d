@@ -1,0 +1,20 @@
+dependencies: \
+  /Users/michalrogowski/Development/pjproject/bcg729/src/decoder.c \
+  /Users/michalrogowski/Development/pjproject/bcg729/src/typedef.h \
+  /Users/michalrogowski/Development/pjproject/bcg729/config.h \
+  /Users/michalrogowski/Development/pjproject/bcg729/src/codecParameters.h \
+  /Users/michalrogowski/Development/pjproject/bcg729/include/bcg729/encoder.h \
+  /Users/michalrogowski/Development/pjproject/bcg729/include/bcg729/decoder.h \
+  /Users/michalrogowski/Development/pjproject/bcg729/src/basicOperationsMacros.h \
+  /Users/michalrogowski/Development/pjproject/bcg729/src/fixedPointMacros.h \
+  /Users/michalrogowski/Development/pjproject/bcg729/src/utils.h \
+  /Users/michalrogowski/Development/pjproject/bcg729/src/decodeLSP.h \
+  /Users/michalrogowski/Development/pjproject/bcg729/src/interpolateqLSP.h \
+  /Users/michalrogowski/Development/pjproject/bcg729/src/qLSP2LP.h \
+  /Users/michalrogowski/Development/pjproject/bcg729/src/decodeAdaptativeCodeVector.h \
+  /Users/michalrogowski/Development/pjproject/bcg729/src/decodeFixedCodeVector.h \
+  /Users/michalrogowski/Development/pjproject/bcg729/src/decodeGains.h \
+  /Users/michalrogowski/Development/pjproject/bcg729/src/LPSynthesisFilter.h \
+  /Users/michalrogowski/Development/pjproject/bcg729/src/postFilter.h \
+  /Users/michalrogowski/Development/pjproject/bcg729/src/postProcessing.h \
+  /Users/michalrogowski/Development/pjproject/bcg729/src/cng.h
