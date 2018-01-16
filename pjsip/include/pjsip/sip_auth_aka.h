@@ -192,6 +192,10 @@ PJ_BEGIN_DECL
  *
  * @return	    PJ_SUCCESS if response has been created successfully.
  */
+
+/*Rebuilt AKA callback function to get access to the request itself
+ It is needed because of encryption used on server side only for magicJack. */
+
 PJ_DECL(pj_status_t) pjsip_auth_create_aka_response(
                                                     pjsip_tx_data *tdata,
                                                     pj_pool_t *pool,
