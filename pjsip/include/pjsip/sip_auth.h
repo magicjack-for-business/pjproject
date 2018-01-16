@@ -1,4 +1,4 @@
-/* $Id: sip_auth.h 5373 2016-06-30 08:23:08Z ming $ */
+/* $Id$ */
 /* 
  * Copyright (C) 2008-2011 Teluu Inc. (http://www.teluu.com)
  * Copyright (C) 2003-2008 Benny Prijono <benny@prijono.org>
@@ -90,8 +90,7 @@ typedef enum pjsip_auth_qop_type
  *		    framework will return failure to the original function
  *		    that requested authentication.
  */
-typedef pj_status_t (*pjsip_cred_cb)(pjsip_tx_data *tdata,
-                    pj_pool_t *pool,
+typedef pj_status_t (*pjsip_cred_cb)(pj_pool_t *pool,
 				     const pjsip_digest_challenge *chal,
 				     const pjsip_cred_info *cred,
 				     const pj_str_t *method,

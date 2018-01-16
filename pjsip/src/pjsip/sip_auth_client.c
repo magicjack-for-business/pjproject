@@ -1,4 +1,4 @@
-/* $Id: sip_auth_client.c 5575 2017-03-31 06:02:48Z riza $ */
+/* $Id$ */
 /*
  * Copyright (C) 2008-2011 Teluu Inc. (http://www.teluu.com)
  * Copyright (C) 2003-2008 Benny Prijono <benny@prijono.org>
@@ -266,8 +266,7 @@ static pj_bool_t has_auth_qop( pj_pool_t *pool, const pj_str_t *qop_offer)
  * The resulting digest will be stored in cred->response.
  * The pool is used to allocate 32 bytes to store the digest in cred->response.
  */
-static pj_status_t respond_digest(pjsip_tx_data *tdata,
-                   pj_pool_t *pool,
+static pj_status_t respond_digest( pj_pool_t *pool,
 				   pjsip_digest_credential *cred,
 				   const pjsip_digest_challenge *chal,
 				   const pj_str_t *uri,
@@ -308,7 +307,7 @@ static pj_status_t respond_digest(pjsip_tx_data *tdata,
 
 	if ((cred_info->data_type & EXT_MASK) == PJSIP_CRED_DATA_EXT_AKA) {
 	    /* Call application callback to create the response digest */
-	    return (*cred_info->ext.aka.cb)(tdata, pool, chal, cred_info,
+	    return (*cred_info->ext.aka.cb)(pool, chal, cred_info,
 					    method, cred);
 	}
 	else {
@@ -335,7 +334,7 @@ static pj_status_t respond_digest(pjsip_tx_data *tdata,
 
 	if ((cred_info->data_type & EXT_MASK) == PJSIP_CRED_DATA_EXT_AKA) {
 	    /* Call application callback to create the response digest */
-	    return (*cred_info->ext.aka.cb)(tdata, pool, chal, cred_info,
+	    return (*cred_info->ext.aka.cb)(pool, chal, cred_info,
 					    method, cred);
 	}
 	else {
@@ -652,8 +651,7 @@ PJ_DEF(pj_status_t) pjsip_auth_clt_get_prefs(pjsip_auth_clt_sess *sess,
  * Create Authorization/Proxy-Authorization response header based on the challege
  * in WWW-Authenticate/Proxy-Authenticate header.
  */
-static pj_status_t auth_respond( pjsip_tx_data *tdata,
-                 pj_pool_t *req_pool,
+static pj_status_t auth_respond( pj_pool_t *req_pool,
 				 const pjsip_www_authenticate_hdr *hdr,
 				 const pjsip_uri *uri,
 				 const pjsip_cred_info *cred_info,
@@ -717,7 +715,7 @@ static pj_status_t auth_respond( pjsip_tx_data *tdata,
 #	endif	/* PJSIP_AUTH_QOP_SUPPORT */
 
 	hauth->scheme = pjsip_DIGEST_STR;
-	status = respond_digest(tdata, pool, &hauth->credential.digest,
+	status = respond_digest( pool, &hauth->credential.digest,
 				 &hdr->challenge.digest, &uri_str, cred_info,
 				 cnonce, nc, &method->name);
 	if (status != PJ_SUCCESS)
@@ -796,7 +794,7 @@ static pj_status_t new_auth_for_req( pjsip_tx_data *tdata,
     if (!cred)
 	return PJSIP_ENOCREDENTIAL;
 
-    status = auth_respond(tdata, tdata->pool, auth->last_chal,
+    status = auth_respond( tdata->pool, auth->last_chal,
 			   tdata->msg->line.req.uri,
 			   cred, &tdata->msg->line.req.method,
 			   sess->pool, auth, &hauth);
@@ -1112,7 +1110,7 @@ static pj_status_t process_auth( pj_pool_t *req_pool,
     }
 
     /* Respond to authorization challenge. */
-    status = auth_respond(tdata, req_pool, hchal, uri, cred,
+    status = auth_respond( req_pool, hchal, uri, cred,
 			   &tdata->msg->line.req.method,
 			   sess->pool, cached_auth, h_auth);
     return status;

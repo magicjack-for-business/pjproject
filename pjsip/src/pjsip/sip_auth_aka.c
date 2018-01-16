@@ -1,4 +1,4 @@
-/* $Id: sip_auth_aka.c 3999 2012-03-30 07:10:13Z bennylp $ */
+/* $Id$ */
 /* 
  * Copyright (C) 2008-2011 Teluu Inc. (http://www.teluu.com)
  * Copyright (C) 2003-2008 Benny Prijono <benny@prijono.org>
@@ -34,8 +34,7 @@
 /*
  * Create MD5-AKA1 digest response.
  */
-PJ_DEF(pj_status_t) pjsip_auth_create_aka_response(
-                        pjsip_tx_data *tdata,
+PJ_DEF(pj_status_t) pjsip_auth_create_aka_response( 
 					     pj_pool_t *pool,
 					     const pjsip_digest_challenge*chal,
 					     const pjsip_cred_info *cred,

@@ -1,4 +1,4 @@
-/* $Id: sip_auth_aka.h 3553 2011-05-05 06:14:19Z nanang $ */
+/* $Id$ */
 /* 
  * Copyright (C) 2008-2011 Teluu Inc. (http://www.teluu.com)
  * Copyright (C) 2003-2008 Benny Prijono <benny@prijono.org>
@@ -192,17 +192,12 @@ PJ_BEGIN_DECL
  *
  * @return	    PJ_SUCCESS if response has been created successfully.
  */
-
-/*Rebuilt AKA callback function to get access to the request itself
- It is needed because of encryption used on server side only for magicJack. */
-
 PJ_DECL(pj_status_t) pjsip_auth_create_aka_response(
-                                                    pjsip_tx_data *tdata,
-                                                    pj_pool_t *pool,
-                                                    const pjsip_digest_challenge*chal,
-                                                    const pjsip_cred_info *cred,
-                                                    const pj_str_t *method,
-                                                    pjsip_digest_credential *auth);
+					     pj_pool_t *pool,
+					     const pjsip_digest_challenge*chal,
+					     const pjsip_cred_info *cred,
+					     const pj_str_t *method,
+					     pjsip_digest_credential *auth);
 
 
 /**
