@@ -1383,13 +1383,16 @@ PJ_DEF(pj_status_t) pjsua_acc_modify( pjsua_acc_id acc_id,
 
     /* Unregister first */
     if (unreg_first) {
-	status = pjsua_acc_set_registration(acc->index, PJ_FALSE);
-	if (status != PJ_SUCCESS) {
-	    pjsua_perror(THIS_FILE, "Ignored failure in unregistering the "
-			 "old account setting in modifying account", status);
-	    /* Not really sure if we should return error */
-	    status = PJ_SUCCESS;
-	}
+        
+/*    Remove unregister, from Modify account because server is not handling it properly, we have to do this on our side */
+        
+//    status = pjsua_acc_set_registration(acc->index, PJ_FALSE);
+//    if (status != PJ_SUCCESS) {
+//        pjsua_perror(THIS_FILE, "Ignored failure in unregistering the "
+//             "old account setting in modifying account", status);
+//        /* Not really sure if we should return error */
+//        status = PJ_SUCCESS;
+//    }
 	if (acc->regc != NULL) {
 	    pjsip_regc_destroy(acc->regc);
 	    acc->regc = NULL;
