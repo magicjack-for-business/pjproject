@@ -256,7 +256,8 @@ PJ_DEF(pj_status_t) pjmedia_sdp_attr_get_rtpmap( const pjmedia_sdp_attr *attr,
 
     PJ_ASSERT_RETURN(pj_strcmp2(&attr->name, "rtpmap")==0, PJ_EINVALIDOP);
 
-    PJ_ASSERT_RETURN(attr->value.slen != 0, PJMEDIA_SDP_EINATTR);
+    if (attr->value.slen == 0)
+        return PJMEDIA_SDP_EINATTR;
 
     init_sdp_parser();
 
@@ -344,6 +345,9 @@ PJ_DEF(pj_status_t) pjmedia_sdp_attr_get_fmtp( const pjmedia_sdp_attr *attr,
 
     PJ_ASSERT_RETURN(pj_strcmp2(&attr->name, "fmtp")==0, PJ_EINVALIDOP);
 
+    if (attr->value.slen == 0)
+        return PJMEDIA_SDP_EINATTR;
+
     /* fmtp BNF:
      *	a=fmtp:<format> <format specific parameter>
      */
@@ -381,6 +385,9 @@ PJ_DEF(pj_status_t) pjmedia_sdp_attr_get_rtcp(const pjmedia_sdp_attr *attr,
     PJ_USE_EXCEPTION;
 
     PJ_ASSERT_RETURN(pj_strcmp2(&attr->name, "rtcp")==0, PJ_EINVALIDOP);
+
+    if (attr->value.slen == 0)
+        return PJMEDIA_SDP_EINATTR;
 
     init_sdp_parser();
 
@@ -1522,11 +1529,12 @@ PJ_DEF(pj_status_t) pjmedia_sdp_validate2(const pjmedia_sdp_session *sdp,
 	     * RTC based programs sends "null" for instant messaging!
 	     */
 	    if (pj_isdigit(*m->desc.fmt[j].ptr)) {
-		unsigned pt = pj_strtoul(&m->desc.fmt[j]);
+		unsigned long pt;
+		pj_status_t status = pj_strtoul3(&m->desc.fmt[j], &pt, 10);
 
 		/* Payload type is between 0 and 127. 
 		 */
-		CHECK( pt <= 127, PJMEDIA_SDP_EINPT);
+		CHECK( status == PJ_SUCCESS && pt <= 127, PJMEDIA_SDP_EINPT);
 
 		/* If port is not zero, then for each dynamic payload type, an
 		 * rtpmap attribute must be specified.
